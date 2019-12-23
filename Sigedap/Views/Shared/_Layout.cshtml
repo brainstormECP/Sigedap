@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="sigedap" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Sigedap</title>
+
+    <!-- core CSS -->
+    <link href="~/Content/tema/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/tema/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/tema/css/animate.min.css" rel="stylesheet" />
+    <link href="~/Content/tema/css/prettyPhoto.css" rel="stylesheet" />
+    <link href="~/Content/tema/css/main.css" rel="stylesheet" />
+    <link href="~/Content/tema/css/responsive.css" rel="stylesheet" />
+    <link href="~/Content/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="~/Content/mbs-qdtf.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/tema/css/style.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/all.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="~/Content/tema/images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/Content/tema/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/Content/tema/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/Content/tema/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="~/Content/tema/images/ico/apple-touch-icon-57-precomposed.png">
+    @RenderSection("style", required: false)
+    @RenderSection("devscripts", required: false)
+    <script src="~/Scripts/angular.min.js"></script>
+</head><!--/head-->
+<body class="homepage">
+    <header id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-sm-6 col-xs-4">
+                        <div class="top-number"><p><i class="fa fa-phone-square"></i>  +0123 456 70 90</p></div>
+                    </div>
+                    <div class="col-md-5 col-lg-offset-2 col-sm-6 col-xs-4">
+                        <div class="text-center"><p><i class=""></i>Sistema de Gestión de Daños a la Propiedad</p></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-8">
+                        <div class="social">
+                            <div class="search">
+                                <form role="form">
+                                    <input type="text" class="search-form" autocomplete="off" placeholder="Buscar">
+                                    <i class="fa fa-search"></i>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.container-->
+        </div><!--/.top-bar-->
+        <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="@Url.Action("Index","home")"><img src="~/Content/tema/images/logo.png" alt="logo"></a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="@Url.Action("Index", "Home" )">Inicio</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reclamaciones<i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="@Url.Action("Create", "Reclamacion" )">Nueva Reclamación </a></li>
+                                <li><a href="@Url.Action("Index", "Reclamacion" )">Reclamaciones Existentes </a></li>
+                                <li><a href="@Url.Action("Index", "DictamenDeReclamacion")">Dictamenes de Reclamaciones</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Expedientes <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="@Url.Action("Index", "Expediente" )">Abiertos</a></li>
+                                <li><a href="#">Cerrados</a></li>
+                                <li><a href="#">...</a></li>
+                                <li><a href="#">...</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reportes Estadísticos <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">... </a></li>
+                                <li><a href="#">... </a></li>
+                                <li><a href="#">...</a></li>
+                                <li><a href="#">...</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Trabajadores <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="@Url.Action("Index", "Operador" )">Operadores</a></li>
+                                <li><a href="@Url.Action("Index", "Despachador" )">Despachadores</a></li>
+                                <li><a href="@Url.Action("Index", "Inspector" )">Inspectores</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administrar <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Usuarios</a></li>
+                                <li><a href="@Url.Action("Index", "TipoDeEquipo" )">Tipo de Equipos</a></li>
+                                <li><a href="@Url.Action("Index", "Marca" )">Marcas</a></li>
+                                <li><a href="@Url.Action("Index", "Cliente")">Clientes</a></li>
+                                <li><a href="@Url.Action("Index", "Configuracion")">Configuración</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+
+    </header><!--/header-->
+    @RenderBody()
+
+    <footer id="footer" class="midnight-blue navbar-fixed-bottom up">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p title="">  &copy;  {{@DateTime.Now.Year }} OBEP Jovellanos. {{ 2 + 3}}</p>
+                </div>
+                <div class="col-sm-6">
+                    @*<ul class="pull-right">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Faq</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>*@
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.11.2.min.js"></script>
+    <script src="~/Content/tema/js/jquery.prettyPhoto.js"></script>
+    <script src="~/Content/tema/js/wow.min.js"></script>
+    <script src="~/Content/tema/js/jquery.isotope.min.js"></script>
+    <script src="~/Content/tema/js/bootstrap.min.js"></script>
+    <script src="~/Content/tema/js/main.js"></script>
+    <script>
+        var sigedap = angular.module("sigedap", []);
+        $(document).ready(function () {
+            $(".datepicker").datepicker({
+                dateFormat: "dd/mm/yy",
+                monthNames: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+                    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+                monthNamesShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+                dayNamesMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"]
+            });
+        })
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

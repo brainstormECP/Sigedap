@@ -1,0 +1,115 @@
+﻿@model IEnumerable<Sigedap.Models.DictamenDeReclamacion>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <p>
+            @Html.ActionLink("Nuevo DictamenDeReclamacion", "Create", null, new { @class = "btn btn-success" })
+        </p>
+    </div>
+    <div class="panel-body">
+        <table class="table dynamic">
+            <thead>
+                <tr>
+                    @*<th>
+                            @Html.DisplayNameFor(model => model.Cliente.Ci)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Ueb)
+                        </th>*@
+                    <th>
+                        @Html.DisplayNameFor(model => model.CiReclamante)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.NombreReclamante)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Observaciones)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RevisadoPor)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AutorizadoPor)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.OficinaComercial)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FechaNotificacionAlCliente)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Procede)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        @*<td>
+                                @Html.DisplayFor(modelItem => item.Cliente.Ci)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Ueb)
+                            </td>*@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CiReclamante)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NombreReclamante)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Observaciones)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RevisadoPor)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AutorizadoPor)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OficinaComercial)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FechaNotificacionAlCliente)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Procede)
+                        </td>
+                        <td class="text-right">
+                            <a data-toggle="tooltip" data-placement="top" title="Editar" class="btn btn-warning btn-sm edit" href="@Url.Action("Edit", "DictamenDeReclamacion", new { id = item.Id }) ">
+                                <span class=" glyphicon glyphicon glyphicon-edit " aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="Ver" class="btn btn-info btn-sm view" href="@Url.Action("Details", "DictamenDeReclamacion", new { id = item.Id })">
+                                <span class="glyphicon glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="Inactivar" class="btn btn-danger btn-sm delete" href="@Url.Action("Delete", "DictamenDeReclamacion", new { id = item.Id })">
+                                <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            </a>
+
+                        </td>
+                    </tr>
+                }
+
+            <tbody>
+
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/jquery.dataTables.js"></script>
+    <script src="~/Scripts/mbs-qdtf.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.edit').tooltip();
+            $('.delete').tooltip();
+            $('.view').tooltip();
+
+        });
+    </script>
+}

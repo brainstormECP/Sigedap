@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Sigedap.Models.Expediente>
+
+    @{
+    ViewBag.Title = "Index";
+    }
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <p><h3>Expedientes Abiertos</h3></p>
+        </div>
+        <div class="panel-body">
+            <table class="table dynamic">
+                <thead>
+                    <tr>
+                        <th>
+                            <small>No Expediente</small>
+                        </th>
+                        <th>
+                            <small>Reclamante</small>
+                        </th>
+                        <th>
+                            <small>Fecha de afectación</small>
+                        </th>
+
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Numero)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DictamenDeReclamacion.NombreReclamante)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FechaAfectacion)
+                        </td>
+                        <td class="text-right">
+                            <a data-toggle="tooltip" data-placement="top" title="Editar" class="btn btn-warning btn-sm edit" href="@Url.Action("Edit", "Expediente" , new { id=item.DictamenDeReclamacionId }) ">
+                                <span class=" glyphicon glyphicon glyphicon-edit " aria-hidden=" true">
+                                </span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="Ver" class="btn btn-info btn-sm view" href="@Url.Action("Details", "Expediente" , new { id=item.DictamenDeReclamacionId })">
+                                <span class="glyphicon glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="Inactivar" class="btn btn-danger btn-sm delete" href="@Url.Action("Delete", "Expediente" , new { id=item.DictamenDeReclamacionId })">
+                                <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            </a>
+                        </td>
+                    </tr>
+                    }
+                <tbody>
+            </table>
+        </div>
+    </div>
+
+    @section Scripts {
+    <script src="~/Scripts/jquery.dataTables.js"></script>
+    <script src="~/Scripts/mbs-qdtf.js"></script>
+    <script>
+    $(document).ready(function () {
+        $('.edit').tooltip();
+        $('.delete').tooltip();
+        $('.view').tooltip();
+
+    });
+    </script>
+
+    }
+

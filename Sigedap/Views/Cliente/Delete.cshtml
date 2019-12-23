@@ -1,0 +1,175 @@
+﻿@model Sigedap.Models.Cliente
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="container">
+    <div class="row">
+        @*<div class="col-md-8 col-md-offset-2">
+            <div class="section-title">
+                <h2  class="text-center"><strong>Eliminar Cliente</strong></h2>
+                <div class="line">
+                    <hr>
+                </div>
+                <div class="clearfix"></div>
+            </div>*@
+        <div class="col-md-12">
+            <h3>¿Esta seguro que desea eliminar este Cliente?</h3>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Ci)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Ci)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nombres)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Nombres)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.PrimerApellido)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.PrimerApellido)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.SegundoApellido)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.SegundoApellido)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Calle)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Calle)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.No)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.No)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Piso)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Piso)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Apto)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Apto)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EntreCalle1)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EntreCalle1)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EntreCalle2)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EntreCalle2)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Rpto)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Rpto)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Municipio)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Municipio)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.TelefonoParticular)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TelefonoParticular)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.TelefonoTrabajo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TelefonoTrabajo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Control)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Control)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Ruta)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Ruta)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Folio)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Folio)
+                </dd>
+
+            </dl>
+            @*<div class="col-md-12 ">*@
+           
+        </div>
+        
+    </div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-3" align="right">
+            @Html.ActionLink("Cerrar", "Index", null, new { @class = "btn btn-default" })
+            <input type="submit" value="Borrar" class="btn btn-danger" />
+            <hr />
+        </div>
+    }
+</div>
+    @*</div>*@
+

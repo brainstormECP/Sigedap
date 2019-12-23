@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Sigedap.Models.Inspector>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class = "panel panel-default">
+<div class = "panel-heading">
+<p>
+    @Html.ActionLink("Nuevo Inspector", "Create",null, new {@class = "btn btn-success"})
+</p>
+</div>
+<div class = "panel-body">
+<table class="table dynamic">
+<thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellidos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Activo)
+        </th>
+        <th></th>
+    </tr>
+</thead>
+<tbody>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apellidos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Activo)
+        </td>
+        <td class="text-right">
+            <a data-toggle="tooltip" data-placement="top" title="Editar" class="btn btn-warning btn-sm edit" href="@Url.Action("Edit", "Inspector", new { id = item.Id }) ">
+                <span class=" glyphicon glyphicon glyphicon-edit " aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Ver" class="btn btn-info btn-sm view" href="@Url.Action("Details", "Inspector", new {id = item.Id})">
+                <span class="glyphicon glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Inactivar" class="btn btn-danger btn-sm delete" href="@Url.Action("Delete", "Inspector", new { id = item.Id })">
+                <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+            </a>
+        </td>
+    </tr>
+}
+<tbody>
+</table>
+</div>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/jquery.dataTables.js"></script>
+    <script src="~/Scripts/mbs-qdtf.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.edit').tooltip();
+        $('.delete').tooltip();
+        $('.view').tooltip();
+
+    });
+</script>
+
+
+
+}
+

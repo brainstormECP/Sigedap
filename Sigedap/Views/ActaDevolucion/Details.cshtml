@@ -1,0 +1,50 @@
+﻿@model Sigedap.Models.ActaDevolucion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ActaDevolucion</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Representante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Representante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CiRepresentante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CiRepresentante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpedienteId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpedienteId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

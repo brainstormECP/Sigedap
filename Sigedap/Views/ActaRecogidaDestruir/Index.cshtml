@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Sigedap.Models.ActaRecogidaDestruir>
+
+@{
+    ViewBag.Title = "Lista";
+}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <p>
+            @Html.ActionLink("Nueva Acta de Recogida para Destruir", "Create", new{id = ViewBag.ExpedienteId}, new { @class = "btn btn-success" })
+        </p>
+    </div>
+    <div class="panel-body">
+        <table class="table dynamic">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Fecha)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FechaDestruccion)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FechaEntregaAlmacen)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RecibidoPor)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Testigo2)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Testigo1)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Testigo3)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fecha)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FechaDestruccion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FechaEntregaAlmacen)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RecibidoPor)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Testigo2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Testigo1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Testigo3)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-info" }) |
+                            @Html.ActionLink("Eliminar", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                        </td>
+                    </tr>
+                }
+            <tbody>
+        </table>
+    </div>
+</div>
+<div class="col-md-3 col-md-offset-2">
+    <a class="btn btn-default" href="@Url.Action("Details", "Expediente", new { id = ViewBag.ExpedienteId })">Átras</a>
+</div>
+@section Scripts {
+    <script src="~/Scripts/jquery.dataTables.js"></script>
+    <script src="~/Scripts/mbs-qdtf.js"></script>
+}
+

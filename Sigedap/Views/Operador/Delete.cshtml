@@ -1,0 +1,60 @@
+﻿@model Sigedap.Models.Operario
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="section-title">
+                    <h2  class="text-center"><strong>Eliminar Operario</strong></h2>
+                    <div class="line">
+                        <hr>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+<div class="col-md-12">
+<h3>¿Esta seguro que desea eliminar este Operario?</h3>    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellidos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Activo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Activo)
+        </dd>
+
+    </dl>
+	<div class="col-md-12">
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-3">
+            @Html.ActionLink("Cerrar", "Index",null,new {@class = "btn btn-default"})
+                <input type="submit" value="Borrar" class="btn btn-danger" />
+				<hr />
+        </div>
+    }
+	 </div>
+</div>
+</div>
+    </div>
+</div>

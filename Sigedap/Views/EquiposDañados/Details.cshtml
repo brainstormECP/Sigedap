@@ -1,0 +1,98 @@
+﻿@model Sigedap.Models.EquipoDañado
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EquipoDañado</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ActaDevolucion.Representante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActaDevolucion.Representante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActaEntregaEquiposReposicion.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActaEntregaEquiposReposicion.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActasRecogidaDestruir.Testigo2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActasRecogidaDestruir.Testigo2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marca.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nacionalidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nacionalidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Serie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Serie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpedienteId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpedienteId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActasRecogidaEquiposId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActasRecogidaEquiposId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

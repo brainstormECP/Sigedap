@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Sigedap.Models.SolicitudReposicion>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class = "panel panel-default">
+<div class = "panel-heading">
+<p>
+    @Html.ActionLink("Nuevo SolicitudReposicion", "Create",null, new {@class = "btn btn-success"})
+</p>
+</div>
+<div class = "panel-body">
+<table class="table dynamic">
+<thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Especialista)
+        </th>
+        <th></th>
+    </tr>
+</thead>
+<tbody>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Especialista)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }, new {@class = "btn btn-info"}) |            
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.Id }, new {@class = "btn btn-danger"})
+        </td>
+    </tr>
+}
+<tbody>
+</table>
+</div>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/jquery.dataTables.js"></script>
+    <script src="~/Scripts/mbs-qdtf.js"></script>
+}
+

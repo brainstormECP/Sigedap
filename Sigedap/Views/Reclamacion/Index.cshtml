@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Sigedap.Models.DictamenDeReclamacion>
+
+    @{
+    ViewBag.Title = "Reclamaciones";
+    }
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h1 class="xh1">Reclamaciones existentes</h1>
+        </div>
+        <div class="panel-body">
+            @if (TempData["success"] != null)
+            {
+            <p class="alert alert-success">@TempData["success"]</p>
+            }
+            <table class="table dynamic">
+                <thead>
+                    <tr>
+                        <th>
+                            CI
+                        </th>
+                        <th>
+                            Nombre y Apellidos
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Observaciones)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Cliente.Direccion)
+                        </th>
+                        <th>
+                            Estado
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model) {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cliente.Ci)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cliente.NombreCompleto)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Observaciones)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cliente.Direccion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Procede)
+                        </td>
+                        
+                        <td class="text-right">
+                            <a class="btn btn-success btn-sm" href="@Url.Action("Create", "Expediente", new { id = item.Id })">
+                                <span class="glyphicon glyphicon glyphicon-folder-open" aria-hidden="true"> Abrir_Expediente</span>
+                            </a>
+                            <a class="btn btn-danger btn-sm" href="@Url.Action("Delete", "Expediente", new { id = item.Id })">
+                                <span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true">Cancelar</span>
+                            </a>
+                        </td>
+                    </tr>
+                }
+                <tbody>
+            </table>
+        </div>
+    </div>
+
+    @section Scripts {
+    <script src="~/Scripts/jquery.dataTables.js"></script>
+    <script src="~/Scripts/mbs-qdtf.js"></script>
+    }
+

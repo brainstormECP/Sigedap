@@ -1,0 +1,102 @@
+﻿@model Sigedap.Models.DictamenTecnico
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2  class="text-center"><strong>Nuevo DictamenTecnico</strong></h2>
+                    <div class="line">
+                        <hr>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="row">        
+        @Html.ValidationSummary(true)
+
+        <div class="col-md-6">
+            @Html.LabelFor(model => model.EquipoDañadoId, "EquipoDañadoId", new { @class = "control-label col-md-6" })
+            <div class="form-group">
+                @Html.DropDownList("EquipoDañadoId",null, String.Empty,new{@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.EquipoDañadoId)
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            @Html.LabelFor(model => model.Numero, new { @class = "control-label col-md-6" })
+            <div class="form-group">
+                @Html.EditorFor(model => model.Numero)
+                @Html.ValidationMessageFor(model => model.Numero)
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            @Html.LabelFor(model => model.Fecha, new { @class = "control-label col-md-6" })
+            <div class="form-group">
+                @Html.EditorFor(model => model.Fecha)
+                @Html.ValidationMessageFor(model => model.Fecha)
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            @Html.LabelFor(model => model.Tecnico1, new { @class = "control-label col-md-6" })
+            <div class="form-group">
+                @Html.EditorFor(model => model.Tecnico1)
+                @Html.ValidationMessageFor(model => model.Tecnico1)
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            @Html.LabelFor(model => model.Tecnico2, new { @class = "control-label col-md-6" })
+            <div class="form-group">
+                @Html.EditorFor(model => model.Tecnico2)
+                @Html.ValidationMessageFor(model => model.Tecnico2)
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            @Html.LabelFor(model => model.Tecnico3, new { @class = "control-label col-md-6" })
+            <div class="form-group">
+                @Html.EditorFor(model => model.Tecnico3)
+                @Html.ValidationMessageFor(model => model.Tecnico3)
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            @Html.LabelFor(model => model.RecibidoPor, new { @class = "control-label col-md-6" })
+            <div class="form-group">
+                @Html.EditorFor(model => model.RecibidoPor)
+                @Html.ValidationMessageFor(model => model.RecibidoPor)
+            </div>
+        </div><div class="col-md-6">
+            @Html.LabelFor(model => model.Destino, new { @class = "control-label col-md-6" })
+            <div class="form-group">                
+                @Html.EditorFor(model => model.Destino)
+                @Html.ValidationMessageFor(model => model.Destino)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-10 col-md-2">
+			    @Html.ActionLink("Cerrar", "Index",null,new {@class = "btn btn-default"})
+                <input type="submit" value="Guardar" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+	<hr/>
+}
+		</div>
+     </div>    
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

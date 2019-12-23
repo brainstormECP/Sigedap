@@ -1,0 +1,175 @@
+﻿@model Sigedap.Models.Expediente
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="container contenido">
+    <h2 class="text-center">Expediente</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <dl class="dl-horizontal dt-left">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Numero)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Numero)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.DictamenDeReclamacion.Ueb)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.DictamenDeReclamacion.Ueb)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.DictamenDeReclamacion.Cliente)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.DictamenDeReclamacion.Cliente.NombreCompleto)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.DictamenDeReclamacion.Cliente.Direccion)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.DictamenDeReclamacion.Cliente.Direccion)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Despachador)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Despachador.NombreCompleto)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Inspector)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Inspector.NombreCompleto)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Operario)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Operario.NombreCompleto)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Causas)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Causas)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.AmparadoPorNt)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.AmparadoPorNt)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.FechaAfectacion)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.FechaAfectacion)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.FechaDeNormalizacionServicio)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.FechaDeNormalizacionServicio)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.FechaRecibidoUebMunicipal)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.FechaRecibidoUebMunicipal)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.FechaVisitaCliente)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.FechaVisitaCliente)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.FechaNt)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.FechaNt)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Observaciones)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Observaciones)
+                        </dd>
+
+                    </dl>
+
+                    <div class="col-md-12 form-group">
+                        <a class="btn btn-default" href="@Url.Action("Expediente","Reportes", new { Id = Model.DictamenDeReclamacionId})" target="blank">Imprimir <i class="glyphicon glyphicon-print"></i></a>
+                        @*@Html.ActionLink("Editar", "Edit", new { id = Model.DictamenDeReclamacionId }, new { @class= "btn btn-success"})*@
+                        @Html.ActionLink("Cerrar", "Index", null, new { @class = "btn btn-default" })
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <a class="btn btn-info" href="@Url.Action("ActaRecogidaTaller", "Expediente", new {Id = Model.DictamenDeReclamacionId})">Acta de recogida de equipos para el taller </a>
+                        @if (Model.ActaRecogidaEquipos != null)
+                        {
+                            <a class="btn btn-default" href="@Url.Action("ActaRecogidaEquipos", "Reportes", new {Id = Model.DictamenDeReclamacionId})" target="blank"><i class="glyphicon glyphicon-print"></i></a>
+                        }
+                    </div>
+                    <div class="form-group"><a class="btn btn-info" href="@Url.Action("EquiposDañados", "Expediente", new { Id = Model.DictamenDeReclamacionId })">Dictamenes Técnicos </a></div>
+                    <div class="form-group">
+                        <a class="btn btn-info" href="@Url.Action("ActaDevolucionEquipo", "Expediente", new {Id = Model.DictamenDeReclamacionId})">Acta de devolucion de equipos </a>
+                        @if (Model.ActaDevolucion != null)
+                        {
+                            <a class="btn btn-default" href="@Url.Action("ActaDevolucionEquipos", "Reportes", new {Id = Model.DictamenDeReclamacionId})" target="blank"><i class="glyphicon glyphicon-print"></i></a>
+                        }
+                    </div>
+                    <div class="form-group">
+                        <a class="btn btn-info" href="@Url.Action("SolicitudReposicion", "Expediente", new {Id = Model.DictamenDeReclamacionId})">Solicitud de reposición</a>
+                        @if (Model.SolicitudReposicion != null)
+                        {
+                            <a class="btn btn-default" href="@Url.Action("SolicitudReposicion", "Reportes", new {Id = Model.DictamenDeReclamacionId})" target="blank"><i class="glyphicon glyphicon-print"></i></a>
+                        }
+                    </div>
+                    <div class="form-group">
+                        <a class="btn btn-info" href="@Url.Action("Index", "ActaRecogidaDestruir", new {Id = Model.DictamenDeReclamacionId})">Actas de recogida y destrucción</a>
+                    </div>
+                    <div class="form-group">
+                        <a class="btn btn-info" href="@Url.Action("Index", "ActaEntregaEquiposReposicion", new {Id = Model.DictamenDeReclamacionId})">Acta de entrega de equipos nuevos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

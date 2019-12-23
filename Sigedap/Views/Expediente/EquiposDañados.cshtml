@@ -1,0 +1,77 @@
+﻿@using DevExpress.Web.ASPxHtmlEditor.Internal
+@model IEnumerable<Sigedap.Models.EquipoDañado>
+
+@{
+    ViewBag.Title = "EquiposDañados";
+}
+<div class="panel panel-default">
+    <div class="panel-heading">
+    </div>
+    <div class="panel-body">
+        <table class="table dynamic">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Marca.Nombre)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TipoDeEquipo.Nombre)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nacionalidad)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Serie)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Modelo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Descripcion)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Marca.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TipoDeEquipo.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nacionalidad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Serie)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Modelo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descripcion)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Dictamen Técnico", "Dictamen","Expediente", new { id = item.Id }, new { @class = "btn btn-info" })
+                        <a class="btn btn-default" href="@Url.Action("DictamenTecnico", "Reportes", new { Id = item.Id })"><i class="glyphicon glyphicon-print"></i></a>
+                    </td>
+                </tr>
+            }
+            <tbody>
+        </table>
+    </div>
+    <div class="col-md-12">
+        <p>
+            @Html.ActionLink("Átras", "Details", "Expediente", new { id = ViewBag.ExpedienteId }, new { @class = "btn btn-default" })
+        </p>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/jquery.dataTables.js"></script>
+    <script src="~/Scripts/mbs-qdtf.js"></script>
+}
+

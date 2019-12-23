@@ -1,0 +1,116 @@
+﻿@model Sigedap.Models.EquipoDañado
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="section-title">
+                    <h2  class="text-center"><strong>Eliminar EquipoDañado</strong></h2>
+                    <div class="line">
+                        <hr>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+<div class="col-md-12">
+<h3>¿Esta seguro que desea eliminar este EquipoDañado?</h3>    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ActaDevolucion.Representante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActaDevolucion.Representante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActaEntregaEquiposReposicion.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActaEntregaEquiposReposicion.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActasRecogidaDestruir.Testigo2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActasRecogidaDestruir.Testigo2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marca.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nacionalidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nacionalidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Serie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Serie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpedienteId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpedienteId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActasRecogidaEquiposId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActasRecogidaEquiposId)
+        </dd>
+
+    </dl>
+	<div class="col-md-12">
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-3">
+            @Html.ActionLink("Cerrar", "Index",null,new {@class = "btn btn-default"})
+                <input type="submit" value="Borrar" class="btn btn-danger" />
+				<hr />
+        </div>
+    }
+	 </div>
+</div>
+</div>
+    </div>
+</div>

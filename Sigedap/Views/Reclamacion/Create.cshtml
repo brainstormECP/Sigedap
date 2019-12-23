@@ -1,0 +1,225 @@
+﻿@using Sigedap.Helpers
+@model Sigedap.ViewModels.ReclamacionViewModel
+
+@{
+    ViewBag.Title = "Nueva Reclamación";
+}
+
+<div class="text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2>
+                        <strong>Nueva Reclamación</strong>
+                    </h2>
+                    <div class="line">
+                        <hr>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="row">
+                        @Html.ValidationSummary(true)
+                        <div class="hidden fadeOut col-md-12" id="cargar" align="center">
+                        </div>
+                        <div class="col-md-6">
+                            <p align="left"><strong>@Html.DisplayNameFor(model => model.DictamenDeReclamacion.Ueb):</strong></p>
+                            <div class="form-group">
+                                <label class="form-control disabled">@ConfiguracionData.Ueb</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <p align="left"><strong>@Html.DisplayNameFor(model => model.DictamenDeReclamacion.OficinaComercial):</strong></p>
+                            <div class="form-group">
+                                <label class="form-control disabled">@ConfiguracionData.OficinaComercial</label>
+                            </div>
+                        </div>
+                        <h4 class="text-center"><strong>Datos del Cliente.</strong></h4>
+                        <div class="line">
+                            <hr>
+                        </div>
+                        <div class="col-md-3">
+                            <p align="left"><strong>@Html.DisplayNameFor(model => model.Cliente.Ci):</strong>
+                            </p>
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.Cliente.Ci, null, new {@class = "form-control", @data_ng_model = "ci"})
+                                @Html.ValidationMessageFor(model => model.Cliente.Ci)
+                            </div>
+                        </div>
+                        @* todo: hacer con nombre lo mismo del carne *@
+                        <div class="col-md-3">
+                            <p align="left"><strong>@Html.DisplayNameFor(model => model.Cliente.Nombres):</strong></p>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Cliente.Nombres)
+                                @Html.ValidationMessageFor(model => model.Cliente.Nombres)
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <p align="left"><strong>@Html.DisplayNameFor(model => model.Cliente.PrimerApellido):</strong></p>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Cliente.PrimerApellido)
+                                @Html.ValidationMessageFor(model => model.Cliente.PrimerApellido)
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <p align="left"><strong>@Html.DisplayNameFor(model => model.Cliente.SegundoApellido):</strong></p>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Cliente.SegundoApellido)
+                                @Html.ValidationMessageFor(model => model.Cliente.SegundoApellido)
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <p align="left"><strong>@Html.DisplayNameFor(model => model.Cliente.Calle):</strong></p>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Cliente.Calle)
+                                @Html.ValidationMessageFor(model => model.Cliente.Calle)
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <p align="left"><strong>@Html.DisplayNameFor(model => model.Cliente.No):</strong></p>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Cliente.No)
+                                @Html.ValidationMessageFor(model => model.Cliente.No)
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <p align="left"><strong>@Html.DisplayNameFor(model => model.Cliente.Piso):</strong></p>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Cliente.Piso)
+                                @Html.ValidationMessageFor(model => model.Cliente.Piso)
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <p align="left"><strong>@Html.DisplayNameFor(model => model.Cliente.Apto):</strong></p>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Cliente.Apto)
+                                @Html.ValidationMessageFor(model => model.Cliente.Apto)
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <p align="left">
+                                <strong>entre:</strong>
+                            </p>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.Cliente.EntreCalle1)
+                                    @Html.ValidationMessageFor(model => model.Cliente.EntreCalle1)
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <p align="left">
+                                        <strong>y</strong>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.Cliente.EntreCalle2)
+                                    @Html.ValidationMessageFor(model => model.Cliente.EntreCalle2)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <p align="left"><strong>@Html.DisplayNameFor(model => model.Cliente.Rpto):</strong></p>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Cliente.Rpto)
+                                @Html.ValidationMessageFor(model => model.Cliente.Rpto)
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <p align="left"><strong>@Html.DisplayNameFor(model => model.Cliente.Municipio):</strong></p>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Cliente.Municipio)
+                                @Html.ValidationMessageFor(model => model.Cliente.Municipio)
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <p align="left"><strong>@Html.DisplayNameFor(model => model.Cliente.TelefonoParticular):</strong></p>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Cliente.TelefonoParticular)
+                                @Html.ValidationMessageFor(model => model.Cliente.TelefonoParticular)
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <p align="left"><strong>@Html.DisplayNameFor(model => model.Cliente.TelefonoTrabajo):</strong></p>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Cliente.TelefonoTrabajo)
+                                @Html.ValidationMessageFor(model => model.Cliente.TelefonoTrabajo)
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <p align="left"><strong>@Html.DisplayNameFor(model => model.Cliente.Control):</strong></p>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Cliente.Control)
+                                @Html.ValidationMessageFor(model => model.Cliente.Control)
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <p align="left"><strong>@Html.DisplayNameFor(model => model.Cliente.Ruta):</strong></p>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Cliente.Ruta)
+                                @Html.ValidationMessageFor(model => model.Cliente.Ruta)
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <p align="left"><strong>@Html.DisplayNameFor(model => model.Cliente.Folio):</strong></p>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Cliente.Folio)
+                                @Html.ValidationMessageFor(model => model.Cliente.Folio)
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <p align="left"><strong>@Html.DisplayNameFor(model => model.DictamenDeReclamacion.NombreReclamante):</strong></p>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.DictamenDeReclamacion.NombreReclamante)
+                                @Html.ValidationMessageFor(model => model.DictamenDeReclamacion.NombreReclamante)
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <p align="left"><strong>@Html.DisplayNameFor(model => model.DictamenDeReclamacion.CiReclamante):</strong></p>
+                            <div class="form-group">
+                                <input id="DictamenDeReclamacion.CiReclamante" name="DictamenDeReclamacion.CiReclamante" class="form-control" value="{{ ci }}" />
+                                @Html.ValidationMessageFor(model => model.DictamenDeReclamacion.CiReclamante)
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-md-offset-2">
+                            <div class="form-group">
+                                <p align="left">
+                                    <strong>@Html.DisplayNameFor(model => model.DictamenDeReclamacion.Procede):</strong>
+                                    @Html.EditorFor(model => model.DictamenDeReclamacion.Procede)
+                                    @Html.ValidationMessageFor(model => model.DictamenDeReclamacion.Procede)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p align="left">
+                        <strong>@Html.DisplayNameFor(model => model.DictamenDeReclamacion.Observaciones)</strong>
+                    </p>
+                    <div class="form-group">
+                        @Html.TextAreaFor(model => model.DictamenDeReclamacion.Observaciones, new { @class = "form-control xtext", @cols = "30", @rows = "3", spellcheck = false })
+                        @Html.ValidationMessageFor(model => model.DictamenDeReclamacion.Observaciones)
+                    </div>
+                    <div class="col-md-2 col-md-offset-10 x">
+                        <button type="submit" id="insertar" class="btn tf-btn btn-success text-right">Agregar</button>
+                    </div>
+
+                }
+
+            </div>
+        </div>
+        <hr />
+    </div>
+    <div>
+
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

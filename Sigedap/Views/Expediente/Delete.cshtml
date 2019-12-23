@@ -1,0 +1,140 @@
+﻿@model Sigedap.Models.Expediente
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="section-title">
+                    <h2  class="text-center"><strong>Eliminar Expediente</strong></h2>
+                    <div class="line">
+                        <hr>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+<div class="col-md-12">
+<h3>¿Esta seguro que desea eliminar este Expediente?</h3>    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Despachador.Nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Despachador.Nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DictamenDeReclamacion.Ueb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DictamenDeReclamacion.Ueb)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inspector.Nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inspector.Nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Operario.Nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Operario.Nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Causas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Causas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AmparadoPorNt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AmparadoPorNt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaAfectacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaAfectacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeNormalizacionServicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeNormalizacionServicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaRecibidoUebMunicipal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaRecibidoUebMunicipal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaVisitaCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaVisitaCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaNt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaNt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observaciones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observaciones)
+        </dd>
+
+    </dl>
+	<div class="col-md-12">
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-3">
+            @Html.ActionLink("Cerrar", "Index",null,new {@class = "btn btn-default"})
+                <input type="submit" value="Borrar" class="btn btn-danger" />
+				<hr />
+        </div>
+    }
+	 </div>
+</div>
+</div>
+    </div>
+</div>

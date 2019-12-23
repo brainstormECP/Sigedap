@@ -1,0 +1,82 @@
+﻿@model Sigedap.Models.DictamenTecnico
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DictamenTecnico</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EquipoDañado.Nacionalidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquipoDañado.Nacionalidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tecnico1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tecnico1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tecnico2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tecnico2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tecnico3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tecnico3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecibidoPor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecibidoPor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Destino)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Destino)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EquipoDañadoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

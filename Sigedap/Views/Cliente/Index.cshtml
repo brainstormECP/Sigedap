@@ -1,0 +1,148 @@
+﻿@model IEnumerable<Sigedap.Models.Cliente>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <p>
+            @Html.ActionLink("Nuevo Cliente", "Create", null, new { @class = "btn btn-success" })
+        </p>
+    </div>
+    <div class="containerx">
+        <div class="panel-body">
+            <table class="table dynamic pad">
+                <thead>
+                    <tr class="small">
+                        <th>
+                            @Html.DisplayNameFor(model => model.Ci)
+                        </th>
+                        <th>
+                            Nombre y Apellidos
+                        </th>
+                        @*<th>
+                            @Html.DisplayNameFor(model => model.PrimerApellido)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.SegundoApellido)
+                        </th>*@
+                        <th>
+                            @Html.DisplayNameFor(model => model.Calle)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.No)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Piso)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Apto)
+                        </th>
+                        <th>
+                           Entre
+                        </th><th>
+                            @Html.DisplayNameFor(model => model.Rpto)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Municipio)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TelefonoParticular)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TelefonoTrabajo)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Control)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Ruta)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Folio)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="small">
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Ci)</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NombreCompleto) </td>
+                            @*<td>
+                                @Html.DisplayFor(modelItem => item.PrimerApellido)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SegundoApellido)
+                            </td>*@
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Calle)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.No)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Piso)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Apto)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EntreCalle1) y @Html.DisplayFor(modelItem => item.EntreCalle2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Rpto)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Municipio)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TelefonoParticular)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TelefonoTrabajo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Control)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Ruta)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Folio)
+                            </td>
+                            <td class="text-right">
+                                <a data-toggle="tooltip" data-placement="top" title="Editar" class="btn btn-warning btn-sm edit" href="@Url.Action("Edit", "Cliente", new { id = item.Id }) ">
+                                    <span class=" glyphicon glyphicon glyphicon-edit " aria-hidden="true"></span>
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="Ver" class="btn btn-info btn-sm view" href="@Url.Action("Details", "Cliente", new { id = item.Id })">
+                                    <span class="glyphicon glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="Inactivar" class="btn btn-danger btn-sm delete" href="@Url.Action("Delete", "Cliente", new { id = item.Id })">
+                                    <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                <tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/jquery.dataTables.js"></script>
+    <script src="~/Scripts/mbs-qdtf.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.edit').tooltip();
+        $('.delete').tooltip();
+        $('.view').tooltip();
+
+    });
+</script>
+}
+

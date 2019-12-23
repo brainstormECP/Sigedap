@@ -1,0 +1,63 @@
+﻿@model Sigedap.Models.ActaRecogidaEquipos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div><h4>ActaRecogidaEquipos</h4> 
+    <div align="right">
+    <a data-toggle="tooltip" data-placement="top" title="Editar" class="btn btn-warning btn-sm edit" href="@Url.Action("Edit", "ActaRecogidaEquipos", new { id = Model.ExpedienteDictamenDeReclamacionId}) ">
+        <span class=" glyphicon glyphicon glyphicon-edit " aria-hidden=" true">
+        </span>
+    </a>
+</div>
+    <hr />
+  
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreRepresentante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreRepresentante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CiRepresentante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CiRepresentante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Expediente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Expediente.Numero)
+        </dd>
+
+    </dl>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/jquery.dataTables.js"></script>
+    <script src="~/Scripts/mbs-qdtf.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.edit').tooltip();
+        });
+    </script>
+}
+

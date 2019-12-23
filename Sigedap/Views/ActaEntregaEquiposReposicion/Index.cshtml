@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Sigedap.Models.ActaEntregaEquiposReposicion>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <p>
+            @Html.ActionLink("Nueva Acta de Entrega de Equipos por Reposición", "Create", new{id = ViewBag.ExpedienteId}, new { @class = "btn btn-success" })
+        </p>
+    </div>
+    <div class="panel-body">
+        <table class="table dynamic">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Fecha)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Expediente)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fecha)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Expediente.Numero)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-info" }) |
+                            @Html.ActionLink("Eliminar", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                        </td>
+                    </tr>
+                }
+            <tbody>
+        </table>
+    </div>
+</div>
+<div class="col-md-3 col-md-offset-2">
+    <a class="btn btn-default" href="@Url.Action("Details", "Expediente", new { id = ViewBag.ExpedienteId })">Átras</a>
+</div>
+@section Scripts {
+    <script src="~/Scripts/jquery.dataTables.js"></script>
+    <script src="~/Scripts/mbs-qdtf.js"></script>
+}
+
