@@ -1,0 +1,946 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="e0451a2d-be98-4447-8a8a-527aab499748"
+  name="SigedaIngSoft" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <appliedStereotypesInternal>
+    <stereotypeInstance
+      Id="b0fa4454-54d8-467f-81ff-6c1a29539620"
+      name="namespace"
+      profile="CSharpProfile">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="f246fcce-f9f7-45b9-8ba1-9b170d41532f">
+          <propertyInstance
+            Id="94b33faa-ec6e-4988-a645-98d649087d3c"
+            name="BaseName" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="f19f50ac-cf58-4230-9aca-03eafd0e366b">
+          <propertyInstance
+            Id="4c05c30b-25c9-4ca5-8618-c0f3065e9898"
+            name="ClrAttributes" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="957b7eb8-9c85-4297-9c7b-93fff30d1df8">
+          <propertyInstance
+            Id="34c50ec5-fdfc-4049-b4d0-0150b0cdf727"
+            name="Usings" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance
+      Id="607ebe27-8768-40ba-a39d-b6b2a64022e8"
+      name="TextTemplateBindings"
+      profile="TextTemplateBindings">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="1a800a15-6f43-4842-a61e-df2383e3c137">
+          <propertyInstance
+            Id="492f25e6-dbd8-40cc-8b59-fc5dedee2d06"
+            name="Alias"
+            value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="15bf8290-4d16-4c5d-ad84-aebcc7201c86">
+          <propertyInstance
+            Id="b05b1cce-9f9d-4026-8aae-6717d9dcdc80"
+            name="TemplateFilePath"
+            value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="21f95bb3-6c2a-407f-aae7-fd61de60b2e1">
+          <propertyInstance
+            Id="29a87847-631e-4969-923a-ac1e2b17447e"
+            name="ProjectPath"
+            value="ClassTemplate=..\SigedaIngSoftLib\SigedaIngSoftLib.csproj|EnumTemplate=..\SigedaIngSoftLib\SigedaIngSoftLib.csproj|InterfaceTemplate=..\SigedaIngSoftLib\SigedaIngSoftLib.csproj|StructTemplate=..\SigedaIngSoftLib\SigedaIngSoftLib.csproj" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="927b2d6b-8f71-404d-8355-625841c4881e">
+          <propertyInstance
+            Id="1ae83503-0391-4858-b6b7-6037b90d631b"
+            name="TargetDirectory"
+            value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="fb07351c-c5ea-4a8a-b26a-83004a95e288">
+          <propertyInstance
+            Id="3aa685ac-88d6-4660-a8ed-e8e80a82f8bb"
+            name="TargetName"
+            value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="d48233bb-19c4-4233-af7f-4b87304d89d6">
+          <propertyInstance
+            Id="d982ebed-e871-4597-8350-6bea3c4ba5b8"
+            name="Overwrite"
+            value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="0d9f99c9-53ff-4764-83bb-d725a217143a">
+          <propertyInstance
+            Id="bc49ffe4-156e-4344-afe0-c9138f327a31"
+            name="Parameters" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="bcf7f77a-4ed1-4e1d-a0f1-94a99e0a957e">
+      <profileInstance
+        Id="931bc064-bd15-4a20-b347-223076abd463"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="7d1fa7ac-5a5c-49b5-8c4d-f41132f80980">
+      <profileInstance
+        Id="cf950923-5961-41f4-9c34-8166bf26d8e7"
+        name="TextTemplateBindings" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="7eeb052a-04d0-4949-a731-ff8195fd98b3"
+        name="Trabajador"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="df6925f1-c93a-4b20-89b0-88ca3c93d773"
+            isDerived="false"
+            sourceEndRoleName="Trabajador"
+            targetEndRoleName="Recoger Datos de la reclamacion"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="ae821290-7a5f-4022-b87e-1ab577c8fdb4"
+              LastKnownName="Recoger Datos de la reclamacion"
+              LastKnownLocation="SigedaIngSoft.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d6c8a359-5e93-4f94-a715-6fd24facea8a"
+                  name="Trabajador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8e6a0271-2724-46bb-80f8-c10d2dfb27ed"
+                  name="Recoger Datos de la reclamacion"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="790ee95d-577f-45a0-b9ea-6dfef9eb3ab4"
+            isDerived="false"
+            sourceEndRoleName="Trabajador"
+            targetEndRoleName="Confeccionar Expediente de la reclamacion"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="0e434d32-5e2b-4a23-a629-7c88caa486cc"
+              LastKnownName="Confeccionar Expediente de la reclamacion"
+              LastKnownLocation="SigedaIngSoft.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="96404cec-cac3-435e-9fa3-b4bd45c02eb3"
+                  name="Trabajador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="94987b2f-87c0-46fc-b7f9-57e78fb85293"
+                  name="Confeccionar Expediente de la reclamacion"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="3da0e0c3-d343-4291-9d74-6bd135d83416"
+            isDerived="false"
+            sourceEndRoleName="Trabajador"
+            targetEndRoleName="Confeccionar acta de recogida de equipos para taller"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e51ccc07-5121-4383-8b6d-c29f1d2d13f0"
+              LastKnownName="Confeccionar acta de recogida de equipos para taller"
+              LastKnownLocation="SigedaIngSoft.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fbe353a1-f6aa-4ca6-aebe-fba3d1064b6e"
+                  name="Trabajador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4e3eb627-a024-47d0-b642-ba92b57914a4"
+                  name="Confeccionar acta de recogida de equipos para taller"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="079f6473-0403-4f23-a441-b9ac264f84dd"
+            isDerived="false"
+            sourceEndRoleName="Trabajador"
+            targetEndRoleName="Confeccionar dictamen tecnico por cada equipo recogido"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="646dc586-1728-4439-beb3-cc6c726b9905"
+              LastKnownName="Confeccionar dictamen tecnico por cada equipo recogido"
+              LastKnownLocation="SigedaIngSoft.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3f27f68e-0e8e-4c30-bff3-f9eddc8682a0"
+                  name="Trabajador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5cd07af1-b5d2-42a9-bd65-2392bcb90da1"
+                  name="Confeccionar dictamen tecnico por cada equipo recogido"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fb5f6e6e-7157-4646-b9d8-867e08617634"
+            isDerived="false"
+            sourceEndRoleName="Trabajador"
+            targetEndRoleName="Confeccionar acta de devolucion de equipos para baja"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c927590e-f638-45c3-90d1-67acae579daa"
+              LastKnownName="Confeccionar acta de devolucion de equipos para baja"
+              LastKnownLocation="SigedaIngSoft.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="39dd201d-ac63-49c0-bc23-03dc0310986e"
+                  name="Trabajador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6840cf30-5231-4224-9640-f6473507e139"
+                  name="Confeccionar acta de devolucion de equipos para baja"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4f7fa75e-4640-4120-b6f5-0f615ea9e80e"
+            isDerived="false"
+            sourceEndRoleName="Trabajador"
+            targetEndRoleName="Confeccionar acta de recogida y destruccion de equipos"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="03bb316d-2e2c-4fa1-90fb-5de08946be1c"
+              LastKnownName="Confeccionar acta de recogida y destruccion de equipos"
+              LastKnownLocation="SigedaIngSoft.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="245950d6-39cf-45e2-ac6c-ca9e177528f8"
+                  name="Trabajador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b7e56ecf-fa54-4c8e-9658-ddf5fc9fbb86"
+                  name="Confeccionar acta de recogida y destruccion de equipos"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="81c7bf7b-50fa-40a2-bcbd-5aca8b130200"
+            isDerived="false"
+            sourceEndRoleName="Trabajador"
+            targetEndRoleName="Confeccionar solicitud de reposicion de equipos"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2a989fb1-ecea-4665-a4cc-11eb259d9dfa"
+              LastKnownName="Confeccionar solicitud de reposicion de equipos"
+              LastKnownLocation="SigedaIngSoft.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ea7a91e4-8c57-4dd2-8009-ec04fc7bb307"
+                  name="Trabajador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d6931628-0f36-4f4d-833e-5a9194c012ea"
+                  name="Confeccionar solicitud de reposicion de equipos"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="450453aa-18ce-4e5f-815d-dbb7bcc5e751"
+            isDerived="false"
+            sourceEndRoleName="Trabajador"
+            targetEndRoleName="Confeccionar prorroga interna de la garantia comercial"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4e3200ef-b552-4a11-a506-59cb6a8c5265"
+              LastKnownName="Confeccionar prorroga interna de la garantia comercial"
+              LastKnownLocation="SigedaIngSoft.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="df94ca05-13ed-480e-b918-6f68b9f1a694"
+                  name="Trabajador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0d5de860-9436-40d8-8ce6-039d5a0ac28f"
+                  name="Confeccionar prorroga interna de la garantia comercial"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6ea51ff9-49c2-4b39-bf45-d505166cd203"
+            isDerived="false"
+            sourceEndRoleName="Trabajador"
+            targetEndRoleName="Confeccionar acta de entrega de equipos por reposicion"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b18ecebb-162b-4ea4-8291-a7a6cc9140d6"
+              LastKnownName="Confeccionar acta de entrega de equipos por reposicion"
+              LastKnownLocation="SigedaIngSoft.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7ec01b8f-04b3-4ab0-bfd8-b9cce19161e6"
+                  name="Trabajador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c03abcb5-84eb-4fa6-a958-4754f8f72040"
+                  name="Confeccionar acta de entrega de equipos por reposicion"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ae821290-7a5f-4022-b87e-1ab577c8fdb4"
+        name="Recoger Datos de la reclamacion"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="efebbf86-c663-4e3a-818b-b40b6dab66ef">
+            <useCaseMoniker
+              Id="196ddb06-f495-4fa5-84e4-3e0c1e0f135d"
+              LastKnownName="Gestionar Clientes"
+              LastKnownLocation="SigedaIngSoft.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0e434d32-5e2b-4a23-a629-7c88caa486cc"
+        name="Confeccionar Expediente de la reclamacion"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="50f642ea-b917-45e4-a782-68924de5dd78">
+            <useCaseMoniker
+              Id="cd1a4a07-acb0-4690-8bee-bc7587d8df4a"
+              LastKnownName="Gestionar Operarios"
+              LastKnownLocation="SigedaIngSoft.uml" />
+          </dependency>
+          <dependency
+            Id="807c1867-c3d6-43b9-a019-4ba942de9fc3">
+            <useCaseMoniker
+              Id="3d1d4026-35e7-439d-a0d5-b8468f49d81a"
+              LastKnownName="Gestionar  Equipos Dañados"
+              LastKnownLocation="SigedaIngSoft.uml" />
+          </dependency>
+          <dependency
+            Id="ee9b4daf-1000-4408-8a65-d66699e3a488">
+            <useCaseMoniker
+              Id="0eddd000-3213-48e8-bfed-1ac50a519858"
+              LastKnownName="Gestionar Despachadores"
+              LastKnownLocation="SigedaIngSoft.uml" />
+          </dependency>
+          <dependency
+            Id="af2e3526-1cf4-4231-b8c9-a2c47dcf8f0a">
+            <useCaseMoniker
+              Id="c35df732-0af7-4b18-a142-18c9613d9a64"
+              LastKnownName="Gestionar Inspectores"
+              LastKnownLocation="SigedaIngSoft.uml" />
+          </dependency>
+          <dependency
+            Id="b2fa912e-6dd3-477b-864a-b54e5b69673e">
+            <useCaseMoniker
+              Id="ae821290-7a5f-4022-b87e-1ab577c8fdb4"
+              LastKnownName="Recoger Datos de la reclamacion"
+              LastKnownLocation="SigedaIngSoft.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="79a78bf8-8bfb-4022-8e24-0be0d74e7aa7"
+            isDerived="false"
+            sourceEndRoleName="Confeccionar Expediente de la reclamacion"
+            targetEndRoleName="Gestionar  Causas del daño"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="179fe176-e038-4d81-9206-036154caccbe"
+              LastKnownName="Gestionar  Causas del daño"
+              LastKnownLocation="SigedaIngSoft.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="daf19fcb-b342-4e19-a51c-029f15911df9"
+                  name="Confeccionar Expediente de la reclamacion"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="91c7180e-86cb-40f5-9d7d-e3f0e303ea4c"
+                  name="Gestionar  Causas del daño"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e51ccc07-5121-4383-8b6d-c29f1d2d13f0"
+        name="Confeccionar acta de recogida de equipos para taller"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="dff70087-110c-4ac2-87ae-3dee75353db7">
+            <useCaseMoniker
+              Id="0e434d32-5e2b-4a23-a629-7c88caa486cc"
+              LastKnownName="Confeccionar Expediente de la reclamacion"
+              LastKnownLocation="SigedaIngSoft.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="646dc586-1728-4439-beb3-cc6c726b9905"
+        name="Confeccionar dictamen tecnico por cada equipo recogido"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="f5d16fa4-906d-44b6-82a3-55145f70e453">
+            <useCaseMoniker
+              Id="3d1d4026-35e7-439d-a0d5-b8468f49d81a"
+              LastKnownName="Gestionar  Equipos Dañados"
+              LastKnownLocation="SigedaIngSoft.uml" />
+          </dependency>
+          <dependency
+            Id="468751c2-c3bd-4344-8b8b-6bed10607da7">
+            <useCaseMoniker
+              Id="e51ccc07-5121-4383-8b6d-c29f1d2d13f0"
+              LastKnownName="Confeccionar acta de recogida de equipos para taller"
+              LastKnownLocation="SigedaIngSoft.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c927590e-f638-45c3-90d1-67acae579daa"
+        name="Confeccionar acta de devolucion de equipos para baja"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="b0756054-2364-4137-975c-696ae21df6c3">
+            <useCaseMoniker
+              Id="646dc586-1728-4439-beb3-cc6c726b9905"
+              LastKnownName="Confeccionar dictamen tecnico por cada equipo recogido"
+              LastKnownLocation="SigedaIngSoft.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2a989fb1-ecea-4665-a4cc-11eb259d9dfa"
+        name="Confeccionar solicitud de reposicion de equipos"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="e60a944c-c27a-41b5-b779-baca2dda1c14">
+            <useCaseMoniker
+              Id="c927590e-f638-45c3-90d1-67acae579daa"
+              LastKnownName="Confeccionar acta de devolucion de equipos para baja"
+              LastKnownLocation="SigedaIngSoft.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="03bb316d-2e2c-4fa1-90fb-5de08946be1c"
+        name="Confeccionar acta de recogida y destruccion de equipos"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="506b2375-47e3-41af-89fe-47e84d597ea7">
+            <useCaseMoniker
+              Id="2a989fb1-ecea-4665-a4cc-11eb259d9dfa"
+              LastKnownName="Confeccionar solicitud de reposicion de equipos"
+              LastKnownLocation="SigedaIngSoft.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b18ecebb-162b-4ea4-8291-a7a6cc9140d6"
+        name="Confeccionar acta de entrega de equipos por reposicion"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="b3246e61-5674-4026-8842-1e8f57f7b070">
+            <useCaseMoniker
+              Id="733e325a-44c7-4c81-ba69-3f4f60da4fec"
+              LastKnownName="Gestionar Equipos Nuevos"
+              LastKnownLocation="SigedaIngSoft.uml" />
+          </dependency>
+          <dependency
+            Id="6f3c0b28-3e0b-4972-a561-2c741b2a096f">
+            <useCaseMoniker
+              Id="03bb316d-2e2c-4fa1-90fb-5de08946be1c"
+              LastKnownName="Confeccionar acta de recogida y destruccion de equipos"
+              LastKnownLocation="SigedaIngSoft.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4e3200ef-b552-4a11-a506-59cb6a8c5265"
+        name="Confeccionar prorroga interna de la garantia comercial"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="22233377-c89e-40ca-8ca8-e67f6ed60684">
+            <useCaseMoniker
+              Id="b18ecebb-162b-4ea4-8291-a7a6cc9140d6"
+              LastKnownName="Confeccionar acta de entrega de equipos por reposicion"
+              LastKnownLocation="SigedaIngSoft.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="196ddb06-f495-4fa5-84e4-3e0c1e0f135d"
+        name="Gestionar Clientes"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="179fe176-e038-4d81-9206-036154caccbe"
+        name="Gestionar  Causas del daño"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3d1d4026-35e7-439d-a0d5-b8468f49d81a"
+        name="Gestionar  Equipos Dañados"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="733e325a-44c7-4c81-ba69-3f4f60da4fec"
+        name="Gestionar Equipos Nuevos"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="6bf55280-d366-4572-8091-bd81ede58296"
+        name="Administrador"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="7b2c0840-24b6-444f-b89e-44eefedc6a94"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="7eeb052a-04d0-4949-a731-ff8195fd98b3"
+              LastKnownName="Trabajador"
+              LastKnownLocation="SigedaIngSoft.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="d3ded223-b801-4274-9758-0f3f4b98e9b9"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Gestionar Tipo de equipos"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="18e79fd5-1755-4d15-b636-54cd2332e5f4"
+              LastKnownName="Gestionar Tipo de equipos"
+              LastKnownLocation="SigedaIngSoft.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8e258427-38e0-48e3-837a-bf70642b7244"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ce6f5cfd-71ac-4b2f-bac8-a06d8eca9fc6"
+                  name="Gestionar Tipo de equipos"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="34ab4c69-560e-4d6d-827a-f0c74ff5eaaf"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Gestionar  Marcas"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="bce67974-947c-4791-a8be-1c8928d23e06"
+              LastKnownName="Gestionar  Marcas"
+              LastKnownLocation="SigedaIngSoft.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="31b0c4e0-7366-45fe-9e99-8c251634c447"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f1150bf4-f36c-44c0-bd69-536498f4f39d"
+                  name="Gestionar  Marcas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1c6d5d11-2715-429e-b231-d48d28eb7d59"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Gestionar  Usuario"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="1957fb4f-8ae8-4ffd-a5bb-e29bbede8e2a"
+              LastKnownName="Gestionar  Usuario"
+              LastKnownLocation="SigedaIngSoft.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="da30c099-9f59-43a3-ac78-581dc1fce429"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="44f81570-cb02-417e-8fe4-0515fb30fb95"
+                  name="Gestionar  Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="18e79fd5-1755-4d15-b636-54cd2332e5f4"
+        name="Gestionar Tipo de equipos"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bce67974-947c-4791-a8be-1c8928d23e06"
+        name="Gestionar  Marcas"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1957fb4f-8ae8-4ffd-a5bb-e29bbede8e2a"
+        name="Gestionar  Usuario"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="02f5fc37-eac2-41e6-a5b5-84c2610d27a6"
+        LastKnownName="Sigeda.Models"
+        LastKnownLocation="Package_1651.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cd1a4a07-acb0-4690-8bee-bc7587d8df4a"
+        name="Gestionar Operarios"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0eddd000-3213-48e8-bfed-1ac50a519858"
+        name="Gestionar Despachadores"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c35df732-0af7-4b18-a142-18c9613d9a64"
+        name="Gestionar Inspectores"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
